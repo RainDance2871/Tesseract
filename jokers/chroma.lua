@@ -1,0 +1,49 @@
+SMODS.Joker { --chroma
+  key = 'chroma',
+
+   in_pool = function(self, args)
+    for _, playing_card in ipairs(G.playing_cards or {}) do
+      if SMODS.has_enhancement(playing_card, 'm_wild') then
+        return true
+      end
+    end
+    return false
+  end,
+  
+  rarity = 3,
+  atlas = 'T.Jokers',
+  pos = { x = 2, y = 0 },
+  soul_pos = { x = 3, y = 0 },
+  cost = 9,
+  blueprint_compat = false,
+  perishable_compat = true,
+  eternal_compat = true,
+  
+  loc_vars = function(self, info_queue, card)
+    info_queue[#info_queue + 1] = G.P_CENTERS.m_wild
+  end,
+  
+  calculate = function(self, card, context)
+    if context.before and not context.blueprint then
+      local wilds = {}
+      for k, v in ipairs(context.scoring_hand) do
+        if v.ability.name == "Wild Card" then
+          wilds[#wilds+1] = v
+          v:set_edition({ polychrome = true }, true)
+          G.E_MANAGER:add_event(Event({
+            func = function()
+              v:juice_up()
+              return true
+            end
+          }))
+        end
+      end
+      if #wilds > 0 then
+        return {
+          message = 'Polychrome!',
+          colour = G.C.DARK_EDITION,
+        }
+      end
+    end
+  end
+}

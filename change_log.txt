@@ -1,0 +1,19 @@
+General changes:
+- Put each joker in a seperate file, allowing easier future contributions.
+- Added localization support. Right now, only en-us is supported.
+- Integrated an earlier pull request by nixbird, allowing support for JokerDisplay.
+
+Jokers changes:
+Minor functional changes:
+- Bismuth and Chromatic Aberration now only appear if you have at least one Wild Card in your deck.
+- Conduit now only appears if you have at least one Bonus or Mult Card in your deck.
+- nixbird: Blue Java, Mint, Pineapple and Apple Pie are marked as food.
+- Mint Condition has its timing issue addressed: Now pays out money first.
+
+Visual changes:
+- Apple Pie and Pineapple's secondary effects are clarified to happen at end of round.
+- Bismuth, Chromatic Aberration and Conduit each now display the relevant info boxes.
+- Jimbette now has her upgrade message in the right location.
+- Letter Blocks now has only one upgrade message per hand played and it is in the right location.
+- nixbird: Mint Condition typo fixed.
+- Waterfall's chip scoring message now only triggers once.

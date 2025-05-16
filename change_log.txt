@@ -16,4 +16,5 @@ Visual changes:
 - Jimbette now has her upgrade message in the right location.
 - Letter Blocks now has only one upgrade message per hand played and it is in the right location.
 - nixbird: Mint Condition typo fixed.
+- Penrose's transformation timing is now clearly after scoring.
 - Waterfall's chip scoring message now only triggers once.

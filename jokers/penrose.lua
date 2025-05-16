@@ -18,11 +18,16 @@ SMODS.Joker { --penrose
         end
       end
       if #threes == 1 then
-        for _, card in pairs(G.play.cards) do
-          if card ~= threes[1] then
-            copy_card(threes[1], card)
+        G.E_MANAGER:add_event(Event({
+          func = function() 
+            for _, card in pairs(G.play.cards) do
+              if card ~= threes[1] then
+                copy_card(threes[1], card)
+              end
+            end
+            return true
           end
-        end
+        }))
       end
       return nil, true
     end

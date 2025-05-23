@@ -1,6 +1,6 @@
 SMODS.Joker {
   key = 'reserve',
-
+  pixel_size = { w = 52, h = 82 },
   cost = 7,
   rarity = 2,
   atlas = 'T.Jokers',

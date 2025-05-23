@@ -14,8 +14,8 @@ return {
         name = "Letter Blocks",
         text = {
           "Gains {C:mult}+#1#{} Mult for each",
-          "{C:attention}lettered{} card {C:inactive}(A, K, Q, J) {}scored",
-          "in {C:attention}first hand{} of round",
+          "{C:attention}lettered{} card {C:inactive}(A, K, Q, J)",
+          "scored in {C:attention}first hand{} of round",
           "{C:inactive}(Currently {C:mult}+#2# {C:inactive}Mult){}"
         }
       },
@@ -73,7 +73,8 @@ return {
       j_tes_mahjong = {
         name = 'Mahjong Tile',
         text = {
-          "Earn {C:money}$#1#{} if played hand contains a {C:attention}Pair{}"
+          "Earn {C:money}$#1#{} if played",
+          "hand contains a {C:attention}Pair{}"
         }
       },
       
@@ -119,7 +120,8 @@ return {
       j_tes_reserve = {
         name = "Reserve Leaflet",
         text = {
-          "{X:mult,C:white}X#1#{} Mult for each {C:rare}Rare{C:attention} Joker"
+          "{C:rare}Rare{C:attention} Jokers",
+          "each give {X:mult,C:white} X#1# {} Mult"
         }
       },
       

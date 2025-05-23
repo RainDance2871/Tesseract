@@ -1,5 +1,6 @@
 SMODS.Joker { --mahjong
   key = 'mahjong',
+  pixel_size = { w = 61, h = 84 },
   rarity = 2,
   cost = 6,
   perishable_compat = true,

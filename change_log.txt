@@ -16,6 +16,7 @@ Visual changes:
 - Bismuth, Chromatic Aberration and Conduit each now display the relevant info boxes.
 - Mahjong Tile and Reserve Leaflet now have a hitbox matching their sprites
 - Jimbette now has her upgrade message in the right location.
+- Jimbette's text now uses the same format as Yorick.
 - Letter Blocks now has only one upgrade message per hand played and it is in the right location.
 - Mahjong Tile's text spread over two lines.
 - nixbird: Mint Condition typo fixed.

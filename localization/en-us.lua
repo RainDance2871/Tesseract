@@ -64,9 +64,10 @@ return {
       j_tes_jimbette = {
         name = 'Jimbette',
         text = {
-          "Gains {C:mult}+#1# {}Mult for every",
-          "{C:attention}7{} {C:hearts}Hearts{} scored {C:inactive}({C:attention}#3#{C:inactive} left)",
-          "{C:inactive}(Currently{} {C:mult}+#2#{C:inactive} Mult)"
+          "This Joker gains {C:mult}+#1#{} Mult",
+          "every {C:attention}7 {C:inactive}[#3#]{} cards",
+          "with {C:hearts}Heart{} suit scored",
+          "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
         }
       },
       

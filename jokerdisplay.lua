@@ -1,3 +1,5 @@
+local jd_def = JokerDisplay.Definitions
+
 jd_def["j_tes_blue_java"] = { -- Blue Java
     text = {
         { text = "+" },

@@ -1,8 +1,5 @@
 SMODS.Joker { --blocks
   key = 'blocks',
-  loc_txt = {
-    
-  },
   rarity = 2,
   cost = 6,
   eternal_compat = true,
@@ -10,13 +7,15 @@ SMODS.Joker { --blocks
   blueprint_compat = true,
   atlas = "T.Jokers",
   pos = { x = 2, y = 2 },
-  config = { extra = { mult = 0, mult_gain = 2 } },
+  config = { extra = { mult = 0, mult_gain = tes.config.rebalance and 1 or 2 } },
   loc_vars = function(self, info_queue, card)
+    card.ability.extra.mult_gain = tes.config.rebalance and 1 or 2
     return { vars = { card.ability.extra.mult_gain, card.ability.extra.mult } }
   end,
   
   calculate = function (self, card, context)
     if context.cardarea == G.jokers and context.before and G.GAME.current_round.hands_played == 0 and not context.blueprint then
+      card.ability.extra.mult_gain = tes.config.rebalance and 1 or 2
       local upgrade = false
       for i = 1, #context.scoring_hand do
         local scoring_card = context.scoring_hand[i]

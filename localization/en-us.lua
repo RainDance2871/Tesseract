@@ -4,8 +4,9 @@ return {
       j_tes_bismuth = {
         name = 'Bismuth',
         text = {
-          "Retrigger each played",
-          "{C:attention}Wild Card{} twice"
+          "Retrigger each",
+          "played {C:attention}Wild Card{} an",
+          "additional {C:attention}#1#{} times"
         }
       },
           

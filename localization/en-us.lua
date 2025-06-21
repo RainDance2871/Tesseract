@@ -5,16 +5,15 @@ return {
         name = 'Bismuth',
         text = {
           "Retrigger each played",
-          "{C:attention}Wild Card #1#{} additional",
-          "times"
+          "{C:attention}Wild Card{} twice"
         }
       },
           
       j_tes_blocks = {
         name = "Letter Blocks",
         text = {
-          "Gains {C:mult}+#1#{} Mult for each",
-          "{C:attention}lettered{} card {C:inactive}(A, K, Q, J)",
+          "This Joker gains {C:mult}+#1#{} Mult for",
+          "each {C:attention}lettered{} card {C:inactive}(A, K, Q, J)",
           "scored in {C:attention}first hand{} of round",
           "{C:inactive}(Currently {C:mult}+#2# {C:inactive}Mult)"
         }
@@ -38,10 +37,10 @@ return {
       j_tes_conduit = {
         name = 'Conduit',
         text = {
-          "Played {C:attention}Mult Cards{} give",
-          "{C:chips}+#1#{} Chips when scored",
           "Played {C:attention}Bonus Cards{} give",
-          "{C:mult}+#2#{} Mult when scored"
+          "{C:mult}+#2#{} Mult when scored",
+          "Played {C:attention}Mult Cards{} give",
+          "{C:chips}+#1#{} Chips when scored"
         }
       },
       

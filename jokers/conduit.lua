@@ -26,17 +26,18 @@ SMODS.Joker { --conduit
   
   calculate = function(self, card, context)
     if context.individual and context.cardarea == G.play then
-      if context.other_card.ability.name == "Bonus" then
-        return {
-          mult = card.ability.extra.mult,
-          card = context.other_card
-        }
-      elseif context.other_card.ability.name == "Mult" then
-        return {
-          chips = card.ability.extra.chips,
-          card = context.other_card
-        }
+      local ret = {}
+      if SMODS.has_enhancement(context.other_card, 'm_bonus') then
+        ret.mult = card.ability.extra.mult
+        ret.card = context.other_card
       end
+      
+      if SMODS.has_enhancement(context.other_card, 'm_mult') then
+        ret.chips = card.ability.extra.chips
+        ret.card = context.other_card
+      end
+      
+      return ret
     end
   end
 }

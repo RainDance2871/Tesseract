@@ -23,16 +23,10 @@ SMODS.Joker { --bismuth
   rarity = 2,
   cost = 7,
   calculate = function(self, card, context)
-    if context.cardarea == G.play and context.repetition and not context.repetition_only then
-      if context.other_card.ability.name == "Wild Card" then
-        return {
-          message = 'Again!',
-          repetitions = card.ability.extra.repetitions,
-          card = context.other_card
-        }
-      end
+    if context.repetition and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, 'm_wild') then
+      return {
+        repetitions = card.ability.extra.repetitions
+      }
     end
   end
-  
-
 }

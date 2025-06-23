@@ -21,27 +21,32 @@ SMODS.Joker { --chroma
   
   loc_vars = function(self, info_queue, card)
     info_queue[#info_queue + 1] = G.P_CENTERS.m_wild
+    info_queue[#info_queue + 1] = G.P_CENTERS.e_polychrome
   end,
   
   calculate = function(self, card, context)
-    if context.before and not context.blueprint then
-      local wilds = {}
-      for k, v in ipairs(context.scoring_hand) do
-        if v.ability.name == "Wild Card" then
-          wilds[#wilds+1] = v
-          v:set_edition({ polychrome = true }, true)
+    if context.before and context.main_eval and not context.blueprint then
+      local wild = {}
+      for _, scored_card in ipairs(context.scoring_hand) do
+        if SMODS.has_enhancement(scored_card, 'm_wild') and not scored_card.edition.polychrome then
+          wild[#wild + 1] = scored_card
+          scored_card:set_edition('polychrome', true, true)
+          scored_card.delay_edition = true
           G.E_MANAGER:add_event(Event({
             func = function()
-              v:juice_up()
+              play_sound('polychrome1', 1.2, 0.7)
+              scored_card.delay_edition = nil
+              scored_card:juice_up()
               return true
             end
           }))
         end
       end
-      if #wilds > 0 then
+      
+      if #wild > 0 then
         return {
-          message = 'Polychrome!',
-          colour = G.C.DARK_EDITION,
+          message = localize('polychrome', 'labels') .. '!',
+          colour = G.C.DARK_EDITION
         }
       end
     end

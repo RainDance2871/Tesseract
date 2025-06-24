@@ -1,6 +1,7 @@
 General changes:
 - Put each joker in a seperate file, allowing easier future contributions.
 - Added localization support. Right now, only en-us is supported.
+- Jokers have their text brought more in-line with Vanilla Balatro.
 - Integrated an earlier pull request by nixbird, allowing support for JokerDisplay.
 - Lots of Joker text has changed to match Vanilla Jokers.
 - Added suppression of Jokers from other mod packs with similar functionality (Can be modified in config).
@@ -13,6 +14,7 @@ Balance changes:
 Bug fixes:
 - Fixed a bug for Impossibility where playing a 2 or 8 but not both caused Impossibility to trigger if you played the other in a later hand.
 - Mint Condition has its timing issue addressed: Now pays out money first.
+- Chromatic Aberration's timing issues adressed. (Visual effect only).
 - Jimbette now has her upgrade message in the right location.
 - Letter Blocks now has only one upgrade message per hand played and it is in the right location.
 - Penrose's transformation timing is now clearly after scoring.
